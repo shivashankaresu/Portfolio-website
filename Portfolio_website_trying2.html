@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiva Shankar Goud | Data Science & AI Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #e0eefd 0%, #d6dffd 60%, #f8fafc 100%);
+      color: #24305E;
+      margin: 0;
+      height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #6C63FF 0%, #FFD700 100%);
+      color: #22223b;
+      padding: 40px 0 0 0;
+      box-shadow: 0 6px 24px #22223b40;
+      border-radius: 0 0 20px 20px;
+      margin-bottom: 30px;
+      height: 45vh;
+    }
+    .profile-top {
+      display: flex;
+      align-items: center;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 20px 8px 20px;
+    }
+    .profile-photo {
+      margin-top:30px
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #FFD700;
+      margin-right: 35px;
+      box-shadow: 0 2px 18px #24305e20;
+      background: #fff;
+    }
+    .main-name {
+      font-size: 2.9rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #00bcd4;
+      text-shadow: 0 4px 16px #ff5722, 0 1px 0 #fff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+    .main-name:hover {
+      color: #ff9800;
+      text-shadow: 0 8px 24px #00bcd4, 0 1px 0 #fff;
+    }
+    .subtitle {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #3B2F63;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+    }
+    header a {
+      color: #24305e;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 20px 0 0 0;
+    }
+    nav ul li {
+      margin: 0 22px;
+    }
+    nav ul li a {
+      color: #22223b;
+      font-weight: bold;
+      font-size: 1.11rem;
+      letter-spacing: 1px;
+      padding: 8px 18px;
+      border-radius: 22px;
+      background: #ffd70015;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      border-bottom: 3px solid transparent;
+    }
+    nav ul li a:hover, nav ul li a:focus {
+      background: #FFD700;
+      color: #334e68;
+      border-bottom: 3px solid #6C63FF;
+    }
+    section.container {
+      max-width: 950px;
+      margin: 35px auto;
+      padding: 34px 23px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 21px #FFD70015;
+      position: relative;
+    }
+    h2 {
+      font-size: 2.1rem;
+      color: #5636B8;
+      border-bottom: 4px solid #FFD700;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    h3 {
+      color: #283044;
+      margin-bottom: 7px;
+      font-weight: 700;
+    }
+    .skills-list span {
+      display: inline-block;
+      background: #ffd70022;
+      color: #24305E;
+      font-weight: bold;
+      padding: 5px 13px;
+      border-radius: 6px;
+      font-size: .97rem;
+      margin: 4px 4px 4px 0;
+    }
+    .project, .experience-item {
+      background: linear-gradient(100deg, #f3fafc 85%, #FFD70020 100%);
+      border-radius: 12px;
+      padding: 17px 18px 13px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 3px 12px #39486720;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project a, .experience-item a {
+      color: #6C63FF;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: color 0.2s;
+    }
+    .project a:hover, .experience-item a:hover {
+      color: #FFD700;
+      text-decoration-color: #FFD700;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    table th, table td {
+      border: 1px solid #d8dffd;
+      padding: 7px 5px;
+    }
+    table th {
+      background: #f7fafd;
+      color: #334e68;
+    }
+    .achievements-list li {
+      margin-bottom: 6px;
+    }
+    .interests-list {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .contact-list li {
+      margin-bottom: 7px;
+      font-weight: bold;
+      color: #334e68;
+      font-size: 1.08rem;
+    }
+    .contact-list a {
+      color: #6C63FF;
+      text-decoration: none;
+    }
+    .contact-list a:hover {
+      text-decoration: underline;
+      color: #FFD700;
+    }
+    footer {
+      margin-top: 40px;
+      background: linear-gradient(90deg, #6C63FF 0%, #FFD700 100%);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0 10px;
+      border-radius: 18px 18px 0 0;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+      box-shadow: 0 -6px 18px #23294630;
+    }
+    @media (max-width: 780px) {
+      .profile-top {flex-direction: column; align-items: center;}
+      .profile-photo {margin: 0 0 18px 0;}
+      .main-name { font-size:2rem;}
+      section.container { padding: 13px 4px; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="profile-top">
+    <img src="https://raw.githubusercontent.com/shivashankaresu/portfolio-website/main/Shankar.jpg" class="profile-photo" alt="Profile Photo">
+      <div>
+        <h1 class="main-name">Shiva Shankar Goud</h1>
+        <p class="subtitle">Aspiring Data Science and AI Professional</p>
+        <p>Hyderabad, Telangana, India &nbsp; | &nbsp; <a href="mailto:resushivashankar13@gmail.com">resushivashankar13@gmail.com</a> &nbsp; | &nbsp; +91 8328103277</p>
+        <p>
+          <a href="https://www.linkedin.com/in/shivashankaresu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> &nbsp; | &nbsp;
+          <a href="https://github.com/shivashankaresu" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate Data Science and AI student actively seeking to contribute in a dynamic organization where I can apply my technical and analytical skills. My commitment to innovation, collaboration, and learning drives me to deliver maximum value through technology.
+    </p>
+  </section>
+
+  <section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="experience-item">
+      <h3>Web Development Intern</h3>
+      <p>Trans Global Geomatics | June 2024 – September 2024, Hyderabad, India</p>
+      <ul>
+        <li>Developed and maintained responsive web pages with HTML, CSS, JavaScript, and Bootstrap.</li>
+        <li>Collaborated with UI/UX and backend teams to create accessible, user-friendly interfaces.</li>
+        <li>Improved front-end performance by 25% via code refactoring and image optimization.</li>
+        <li>Integrated mapping libraries for real-time data visualizations in geospatial platforms.</li>
+        <li>Connected RESTful APIs for live GPS and fleet tracking, automating client reports.</li>
+        <li>Used version control (GitHub), maintained a modular codebase, and participated in Agile sprints.</li>
+        <li>Implemented unit and integration tests for frontend reliability using Jest and React Testing Library.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Food Club Website</h3>
+      <p>Built an interactive, mobile-friendly website using HTML, CSS, Bootstrap, and JavaScript.</p>
+      <ul>
+        <li>Designed clean UI/UX with validated forms and responsive layouts.</li>
+        <li>Implemented secure user authentication and membership management features.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>AI-Powered Resume Analyzer</h3>
+      <p>A web app utilizing NLP to optimize resumes for ATS systems.<br>
+      <a href="https://github.com/shivashankaresu/ai-resume-analyzer" target="_blank">GitHub Link</a></p>
+    </div>
+    <div class="project">
+      <h3>Automated Invoice Generator</h3>
+      <p>Tool to generate invoices automatically from user input using templates.<br>
+      <a href="https://github.com/shivashankaresu/invoice-generator" target="_blank">GitHub Link</a></p>
+    </div>
+    <div class="project">
+      <h3>Smart Interview Preparation Platform</h3>
+      <p>Platform that uses AI to generate interview questions and help users prepare.<br>
+      <a href="https://github.com/shivashankaresu/interview-prep" target="_blank">GitHub Link</a></p>
+    </div>
+  </section>
+
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <table>
+      <tr>
+        <th>Qualification</th>
+        <th>Institute</th>
+        <th>Year</th>
+        <th>Grade/CGPA</th>
+      </tr>
+      <tr>
+        <td>B.Tech (Data Science & AI)</td>
+        <td>ICFAI Foundation for Higher Education, Hyderabad</td>
+        <td>2026*</td>
+        <td>7.23</td>
+      </tr>
+      <tr>
+        <td>Intermediate (MPC)</td>
+        <td>Narayana Institute of Technology, Hyderabad</td>
+        <td>2022</td>
+        <td>8.8</td>
+      </tr>
+      <tr>
+        <td>SSC</td>
+        <td>SRKS Vidyalaya</td>
+        <td>2020</td>
+        <td>10.0</td>
+      </tr>
+    </table>
+    <p>*Expected Graduation</p>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <strong>Soft Skills:</strong>
+    <div class="skills-list">
+      <span>Creative Thinking</span>
+      <span>Problem Solving</span>
+      <span>Strategic Thinking</span>
+      <span>Project Management</span>
+      <span>Collaboration</span>
+      <span>MS Project</span>
+    </div>
+    <br>
+    <strong>Technical Skills:</strong>
+    <div class="skills-list">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>Bootstrap</span>
+      <span>Python</span>
+      <span>R</span>
+      <span>SQL</span>
+      <span>C</span>
+      <span>Java</span>
+      <span>MongoDB</span>
+      <span>Git & GitHub</span>
+      <span>RESTful APIs</span>
+      <span>Jest / React Testing Library</span>
+    </div>
+    <br>
+    <strong>Languages:</strong>
+    <div class="skills-list">
+      <span>English</span>
+      <span>Hindi</span>
+      <span>Telugu</span>
+    </div>
+  </section>
+
+  <section id="achievements" class="container">
+    <h2>Achievements & Highlights</h2>
+    <ul class="achievements-list">
+      <li>Enhanced UI performance by 25% in a live enterprise dashboard.</li>
+      <li>Led user authentication features for a web platform, improving security and reliability.</li>
+      <li>Delivered real-time spatial analytics for business dashboards, providing clients with actionable insights.</li>
+    </ul>
+    <strong>Interests:</strong>
+    <ul class="interests-list">
+      <li>Web & App Development</li>
+      <li>Data Analytics</li>
+      <li>Artificial Intelligence & Machine Learning</li>
+      <li>Open Source Collaboration</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li>Email: <a href="mailto:resushivashankar13@gmail.com">resushivashankar13@gmail.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/shivashankaresu" target="_blank">linkedin.com/in/shivashankaresu</a></li>
+      <li>GitHub: <a href="https://github.com/shivashankaresu" target="_blank">github.com/shivashankaresu</a></li>
+      <li>Phone: +91 8328103277</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Shiva Shankar Goud.
+  </footer>
+</body>
+</html>
